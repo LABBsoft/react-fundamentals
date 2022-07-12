@@ -18,11 +18,13 @@
 <!--   💰 document.getElementById('root') -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
 <body>
-    <div id="root">
-        <script type="module">
-            div = document.getElementById('root');
-            div.textContent = 'Hello World';
-            div.className = 'container';
-        </script>
-    </div>
+    <script type="module">
+        window.onload = function() {
+            const heading = document.createElement("div");
+            const heading_text = document.createTextNode("Hello World");
+            heading.id = "root";
+            heading.appendChild(heading_text);
+            document.body.appendChild(heading);
+        }
+    </script>
 </body>
